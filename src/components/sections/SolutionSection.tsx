@@ -1,0 +1,160 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { StereoVisionDemo } from "@/components/reactbits/StereoVisionDemo";
+import { MotionTrackingDemo } from "@/components/reactbits/MotionTrackingDemo";
+
+export function SolutionSection() {
+    return (
+        <section id="data" className="section-padding relative overflow-hidden">
+            {/* Diagonal accent */}
+            <div
+                className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-teal/5 to-transparent"
+                style={{ clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)' }}
+            />
+
+            <div className="container-main relative z-10">
+                {/* Section Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4 }}
+                    className="mb-16"
+                >
+                    <div className="flex items-center gap-4 mb-4">
+                        <div className="w-2 h-2 bg-teal rounded-full" />
+                        <span className="font-mono text-sm text-teal tracking-wider">SOLUTION</span>
+                        <div className="h-px flex-grow bg-gradient-to-r from-teal/50 to-transparent max-w-32" />
+                    </div>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4">
+                        Full-Body
+                        <br />
+                        <span className="text-gradient">Motion Capture</span>
+                    </h2>
+                    <p className="text-lg text-foreground-muted max-w-2xl">
+                        Capture every joint. Translate to any robot.
+                        Human dexterity mapped to humanoid precision.
+                    </p>
+                </motion.div>
+
+                {/* Dual Demo: Stereo Vision + Motion Tracking */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
+                    className="mb-20"
+                >
+                    <div className="grid lg:grid-cols-2 gap-8 items-start">
+                        {/* Left: Stereo Vision */}
+                        <div>
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center">
+                                    <svg className="w-4 h-4 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                </div>
+                                <h3 className="font-bold text-lg">Human Pose Capture</h3>
+                            </div>
+                            <StereoVisionDemo />
+                        </div>
+
+                        {/* Right: Motion Tracking */}
+                        <div>
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center">
+                                    <svg className="w-4 h-4 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                                    </svg>
+                                </div>
+                                <h3 className="font-bold text-lg">Robot Translation</h3>
+                            </div>
+                            <MotionTrackingDemo />
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Technical Specs Grid */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.2 }}
+                >
+                    <div className="grid md:grid-cols-5 gap-1 bg-glass-border rounded-xl overflow-hidden">
+                        {[
+                            { label: "BODY JOINTS", value: "33", sub: "Full skeleton" },
+                            { label: "HAND JOINTS", value: "42", sub: "Per hand: 21" },
+                            { label: "LATENCY", value: "<5ms", sub: "Real-time" },
+                            { label: "DEXTERITY", value: "99.7%", sub: "Motion fidelity" },
+                            { label: "ROBOTS", value: "ANY", sub: "Universal SDK" },
+                        ].map((spec, i) => (
+                            <div
+                                key={i}
+                                className="bg-background p-6 text-center group hover:bg-teal/5 transition-colors"
+                            >
+                                <div className="font-mono text-[10px] text-foreground-muted tracking-wider mb-2">
+                                    {spec.label}
+                                </div>
+                                <div className="font-mono text-2xl md:text-3xl font-bold text-teal mb-1 group-hover:scale-105 transition-transform">
+                                    {spec.value}
+                                </div>
+                                <div className="text-xs text-foreground-muted">
+                                    {spec.sub}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
+
+                {/* How it works */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.3 }}
+                    className="mt-20"
+                >
+                    <div className="flex items-center gap-4 mb-8">
+                        <span className="font-mono text-sm text-foreground-muted">HOW IT WORKS</span>
+                        <div className="h-px flex-grow bg-glass-border" />
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                step: "01",
+                                title: "Capture Human Motion",
+                                description: "Full-body skeleton tracking captures 33 joints with sub-millimeter precision."
+                            },
+                            {
+                                step: "02",
+                                title: "Translate to Robot",
+                                description: "AI maps human dexterity to any humanoid robot's kinematics in real-time."
+                            },
+                            {
+                                step: "03",
+                                title: "Execute & Learn",
+                                description: "Robot executes movements while learning from human demonstrations."
+                            },
+                        ].map((item, i) => (
+                            <div key={i} className="relative pl-16">
+                                <div className="font-mono text-5xl font-black text-teal absolute top-0 left-0 opacity-80">
+                                    {item.step}
+                                </div>
+                                <div className="relative">
+                                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                                    <p className="text-foreground-muted">{item.description}</p>
+                                </div>
+                                {i < 2 && (
+                                    <div className="hidden md:block absolute top-6 -right-4 w-8 h-px bg-gradient-to-r from-teal/50 to-transparent" />
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
+            </div>
+        </section>
+    );
+}
