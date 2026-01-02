@@ -288,16 +288,16 @@ export function HeroSection() {
 
                         {/* Description */}
                         <p className="text-lg text-foreground-muted max-w-lg mb-8 leading-relaxed">
-                            Capture <span className="text-foreground font-medium">full-body human motion</span> and translate it to any humanoid robot.
-                            33 joint keypoints with <span className="text-teal font-medium">sub-millimeter precision</span> for dexterous manipulation.
+                            Turn <span className="text-foreground font-medium">two smartphones</span> into a sub-millimeter motion capture rig.
+                            Full-body tracking with <span className="text-teal font-medium">33 keypoints</span> translated to any humanoid robot in real-time.
                         </p>
 
                         {/* Stats Row */}
                         <div className="flex gap-8 mb-10">
                             {[
-                                { value: "33", label: "BODY JOINTS" },
-                                { value: "60 FPS", label: "REALTIME" },
-                                { value: "<5ms", label: "LATENCY" },
+                                { value: "2", label: "PHONES" },
+                                { value: "33", label: "JOINTS" },
+                                { value: "$0", label: "HARDWARE" },
                             ].map((stat, i) => (
                                 <motion.div
                                     key={i}

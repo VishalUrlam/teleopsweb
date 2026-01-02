@@ -28,13 +28,13 @@ export function SolutionSection() {
                         <div className="h-px flex-grow bg-gradient-to-r from-teal/50 to-transparent max-w-32" />
                     </div>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4">
-                        Full-Body
+                        Two Phones.
                         <br />
-                        <span className="text-gradient">Motion Capture</span>
+                        <span className="text-gradient">Stereo Vision.</span>
                     </h2>
                     <p className="text-lg text-foreground-muted max-w-2xl">
-                        Capture every joint. Translate to any robot.
-                        Human dexterity mapped to humanoid precision.
+                        Sub-millimeter precision using just two smartphones.
+                        Full-body motion capture with 33 keypoints, translated to any robot in real-time.
                     </p>
                 </motion.div>
 
@@ -125,8 +125,8 @@ export function SolutionSection() {
                         {[
                             {
                                 step: "01",
-                                title: "Capture Human Motion",
-                                description: "Full-body skeleton tracking captures 33 joints with sub-millimeter precision."
+                                title: "Mount Two Phones",
+                                description: "Set up two smartphones for stereo vision. Auto-calibration in 60 seconds. Zero additional hardware."
                             },
                             {
                                 step: "02",
