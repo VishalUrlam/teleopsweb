@@ -108,6 +108,44 @@ export function SolutionSection() {
                     </div>
                 </motion.div>
 
+                {/* Research Highlight */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.25 }}
+                    className="mt-16"
+                >
+                    <div className="glass-card p-6 md:p-8 border-l-4 border-teal">
+                        <div className="flex flex-col md:flex-row md:items-center gap-6">
+                            <div className="flex-shrink-0">
+                                <div className="w-16 h-16 rounded-xl bg-teal/10 flex items-center justify-center">
+                                    <svg className="w-8 h-8 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div className="flex-grow">
+                                <div className="flex flex-wrap items-center gap-2 mb-2">
+                                    <span className="px-2 py-0.5 bg-teal/20 text-teal text-xs font-mono rounded">CVPR 2025</span>
+                                    <span className="px-2 py-0.5 bg-glass-bg text-foreground-muted text-xs font-mono rounded">Harvard • MIT</span>
+                                </div>
+                                <h3 className="text-lg font-bold mb-2">Proprietary Video Bandwidth Optimization</h3>
+                                <p className="text-foreground-muted text-sm">
+                                    Our research on neural video compression reduces bandwidth by 94% while maintaining sub-millimeter tracking precision.
+                                    This enables real-time teleoperation over standard mobile networks with {"<"}5ms latency.
+                                </p>
+                            </div>
+                            <div className="flex-shrink-0 hidden lg:block">
+                                <div className="text-center">
+                                    <div className="font-mono text-3xl font-bold text-teal">94%</div>
+                                    <div className="text-xs text-foreground-muted">Bandwidth Reduction</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+
                 {/* How it works */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

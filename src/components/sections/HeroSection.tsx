@@ -261,14 +261,20 @@ export function HeroSection() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.1 }}
-                            className="inline-flex items-center gap-3 mb-8"
+                            className="flex flex-wrap items-center gap-4 mb-8"
                         >
-                            <div className="w-8 h-8 bg-[#ff6600] rounded flex items-center justify-center">
-                                <span className="text-white font-bold text-sm">Y</span>
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#ff6600]/10 rounded-full border border-[#ff6600]/30">
+                                <div className="w-5 h-5 bg-[#ff6600] rounded flex items-center justify-center">
+                                    <span className="text-white font-bold text-[10px]">Y</span>
+                                </div>
+                                <span className="text-xs font-medium text-[#ff6600]">YC W26</span>
                             </div>
-                            <span className="text-sm font-medium text-foreground-muted">
-                                Y Combinator W26
-                            </span>
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-teal/10 rounded-full border border-teal/30">
+                                <span className="text-xs font-medium text-teal">CVPR 2025</span>
+                            </div>
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-glass-bg rounded-full border border-glass-border">
+                                <span className="text-xs font-medium text-foreground-muted">Harvard • MIT</span>
+                            </div>
                         </motion.div>
 
                         {/* Main Headline - Bold & Technical */}
