@@ -131,10 +131,21 @@ export function SolutionSection() {
                                     <span className="px-2 py-0.5 bg-glass-bg text-foreground-muted text-xs font-mono rounded">Harvard • MIT</span>
                                 </div>
                                 <h3 className="text-lg font-bold mb-2">Proprietary Video Bandwidth Optimization</h3>
-                                <p className="text-foreground-muted text-sm">
+                                <p className="text-foreground-muted text-sm mb-3">
                                     Our research on neural video compression reduces bandwidth by 94% while maintaining sub-millimeter tracking precision.
                                     This enables real-time teleoperation over standard mobile networks with {"<"}5ms latency.
                                 </p>
+                                <a
+                                    href="https://cvpr.thecvf.com/virtual/2025/poster/33296"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-teal text-sm font-medium hover:underline"
+                                >
+                                    Read Paper
+                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
                             </div>
                             <div className="flex-shrink-0 hidden lg:block">
                                 <div className="text-center">
